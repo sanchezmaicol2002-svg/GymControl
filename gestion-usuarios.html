@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymControl - Gestión de usuarios</title>
+  <link rel="stylesheet" href="gestion-usuarios.css">
+  <link rel="stylesheet" href="navegacion.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="menu-lateral">
+      <div class="menu-logo">🏋️ GYMCONTROL</div>
+      <ul class="menu-lista">
+        <li><a href="dashboard.html" class="menu-enlace">📊 Dashboard</a></li>
+        <li><a href="clientes.html" class="menu-enlace">👥 Clientes</a></li>
+        <li><a href="membresias-pagos.html" class="menu-enlace">💳 Membresías y pagos</a></li>
+        <li><a href="control-acceso.html" class="menu-enlace">🚪 Control de acceso</a></li>
+        <li><a href="reportes.html" class="menu-enlace">📈 Reportes</a></li>
+        <li><a href="gestion-usuarios.html" class="menu-enlace activo" aria-current="page">🔐 Usuarios</a></li>
+        <li><a href="configuracion.html" class="menu-enlace">⚙️ Configuración</a></li>
+      </ul>
+      <div class="menu-salir">
+        <a href="login.html" class="menu-enlace">↩ Cerrar sesión</a>
+      </div>
+    </aside>
+    <main class="contenido-principal">
+      <div class="pagina">
+
+        <header class="encabezado">
+          <div>
+            <h1>Gestión de usuarios</h1>
+            <p class="subtitulo">Administra quién puede ingresar al sistema y qué permisos tiene</p>
+          </div>
+          <div class="acciones-encabezado">
+            <a href="#" class="boton boton-primario">+ Nuevo usuario</a>
+          </div>
+        </header>
+
+        <section class="resumen">
+          <div class="tarjeta tarjeta-resumen">
+            <span class="etiqueta">Administradores</span>
+            <span class="numero-grande">1</span>
+          </div>
+          <div class="tarjeta tarjeta-resumen">
+            <span class="etiqueta">Recepcionistas</span>
+            <span class="numero-grande">2</span>
+          </div>
+          <div class="tarjeta tarjeta-resumen">
+            <span class="etiqueta">Entrenadores</span>
+            <span class="numero-grande">3</span>
+          </div>
+        </section>
+
+        <section class="tarjeta">
+          <h2>Usuarios del sistema</h2>
+          <div class="tabla-contenedor">
+            <table class="tabla">
+              <thead>
+                <tr>
+                  <th>Usuario</th>
+                  <th>Correo</th>
+                  <th>Rol</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="usuario">
+                      <span class="avatar avatar-azul">SR</span>
+                      <span>Sofía Ramírez</span>
+                    </div>
+                  </td>
+                  <td>admin@gymcontrol.com</td>
+                  <td><span class="etiqueta-rol administrador">Administrador</span></td>
+                  <td><span class="etiqueta-estado activo">Activo</span></td>
+                  <td><a href="#" class="enlace">Editar</a> · <a href="#" class="enlace enlace-peligro">Desactivar</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="usuario">
+                      <span class="avatar avatar-verde">JC</span>
+                      <span>Julián Castro</span>
+                    </div>
+                  </td>
+                  <td>julian@gymcontrol.com</td>
+                  <td><span class="etiqueta-rol recepcionista">Recepcionista</span></td>
+                  <td><span class="etiqueta-estado activo">Activo</span></td>
+                  <td><a href="#" class="enlace">Editar</a> · <a href="#" class="enlace enlace-peligro">Desactivar</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="usuario">
+                      <span class="avatar avatar-morado">CR</span>
+                      <span>Camila Rojas</span>
+                    </div>
+                  </td>
+                  <td>camila@gymcontrol.com</td>
+                  <td><span class="etiqueta-rol entrenador">Entrenador</span></td>
+                  <td><span class="etiqueta-estado activo">Activo</span></td>
+                  <td><a href="#" class="enlace">Editar</a> · <a href="#" class="enlace enlace-peligro">Desactivar</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="usuario">
+                      <span class="avatar avatar-naranja">FH</span>
+                      <span>Felipe Herrera</span>
+                    </div>
+                  </td>
+                  <td>felipe@gymcontrol.com</td>
+                  <td><span class="etiqueta-rol entrenador">Entrenador</span></td>
+                  <td><span class="etiqueta-estado inactivo">Inactivo</span></td>
+                  <td><a href="#" class="enlace">Editar</a> · <a href="#" class="enlace">Activar</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymControl - Control de acceso</title>
+  <link rel="stylesheet" href="control-acceso.css">
+  <link rel="stylesheet" href="navegacion.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="menu-lateral">
+      <div class="menu-logo">🏋️ GYMCONTROL</div>
+      <ul class="menu-lista">
+        <li><a href="dashboard.html" class="menu-enlace">📊 Dashboard</a></li>
+        <li><a href="clientes.html" class="menu-enlace">👥 Clientes</a></li>
+        <li><a href="membresias-pagos.html" class="menu-enlace">💳 Membresías y pagos</a></li>
+        <li><a href="control-acceso.html" class="menu-enlace activo" aria-current="page">🚪 Control de acceso</a></li>
+        <li><a href="reportes.html" class="menu-enlace">📈 Reportes</a></li>
+        <li><a href="gestion-usuarios.html" class="menu-enlace">🔐 Usuarios</a></li>
+        <li><a href="configuracion.html" class="menu-enlace">⚙️ Configuración</a></li>
+      </ul>
+      <div class="menu-salir">
+        <a href="login.html" class="menu-enlace">↩ Cerrar sesión</a>
+      </div>
+    </aside>
+    <main class="contenido-principal">
+  <div class="pagina">
+
+    <header class="encabezado">
+      <h1>Control de acceso</h1>
+      <p class="subtitulo">Verifica el estado de la membresía antes de permitir el ingreso al gimnasio</p>
+    </header>
+
+    <section class="tarjeta">
+      <h2>Verificar acceso</h2>
+      <p class="texto-ayuda">Busca al cliente por nombre o número de documento para validar su membresía</p>
+      <form class="fila-busqueda" action="#" method="get">
+        <input type="text" name="busqueda" placeholder="Buscar por nombre o número de documento...">
+        <button type="submit" class="boton boton-primario">Verificar acceso</button>
+      </form>
+    </section>
+
+    <section class="resultados-verificacion">
+      <div class="resultado resultado-permitido">
+        <div class="resultado-cabecera">
+          <span class="avatar avatar-verde">CM</span>
+          <div>
+            <p class="nombre-cliente">Carlos Martínez</p>
+            <p class="documento-cliente">CC 1.032.456.789</p>
+          </div>
+        </div>
+        <div class="resultado-datos">
+          <div>
+            <span class="etiqueta">Membresía</span>
+            <span class="valor">Mensual</span>
+          </div>
+          <div>
+            <span class="etiqueta">Vencimiento</span>
+            <span class="valor">31 Ago 2026</span>
+          </div>
+        </div>
+        <div class="estado-acceso estado-permitido">
+          ✔ Acceso permitido
+          <span class="detalle">Cliente con membresía activa</span>
+        </div>
+      </div>
+
+      <div class="resultado resultado-denegado">
+        <div class="resultado-cabecera">
+          <span class="avatar avatar-rojo">AP</span>
+          <div>
+            <p class="nombre-cliente">Andrés Pérez</p>
+            <p class="documento-cliente">CC 1.045.223.910</p>
+          </div>
+        </div>
+        <div class="resultado-datos">
+          <div>
+            <span class="etiqueta">Membresía</span>
+            <span class="valor">Mensual</span>
+          </div>
+          <div>
+            <span class="etiqueta">Vencimiento</span>
+            <span class="valor">10 Ago 2026</span>
+          </div>
+        </div>
+        <div class="estado-acceso estado-denegado">
+          ✖ Acceso denegado
+          <span class="detalle">Su membresía se encuentra vencida</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="resumen">
+      <div class="tarjeta tarjeta-resumen">
+        <span class="etiqueta">Accesos de hoy</span>
+        <span class="numero-grande">87</span>
+      </div>
+      <div class="tarjeta tarjeta-resumen">
+        <span class="etiqueta">Clientes activos</span>
+        <span class="numero-grande">125</span>
+      </div>
+      <div class="tarjeta tarjeta-resumen">
+        <span class="etiqueta">Membresías por vencer</span>
+        <span class="numero-grande">12</span>
+      </div>
+    </section>
+
+    <section class="doble-columna">
+
+      <div class="tarjeta">
+        <h2>Últimos accesos</h2>
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Carlos Martínez</td>
+              <td>20 Ago 2026</td>
+              <td>08:15</td>
+              <td><span class="etiqueta-estado permitido">Permitido</span></td>
+            </tr>
+            <tr>
+              <td>Laura Gómez</td>
+              <td>20 Ago 2026</td>
+              <td>09:02</td>
+              <td><span class="etiqueta-estado permitido">Permitido</span></td>
+            </tr>
+            <tr>
+              <td>Andrés Pérez</td>
+              <td>20 Ago 2026</td>
+              <td>09:18</td>
+              <td><span class="etiqueta-estado denegado">Denegado</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tarjeta">
+        <h2>Alertas</h2>
+        <p class="texto-ayuda">Membresías próximas a vencer</p>
+        <ul class="lista-alertas">
+          <li>
+            <span class="avatar avatar-naranja">MS</span>
+            <div class="info-alerta">
+              <p class="nombre-cliente">Mateo Silva</p>
+              <p class="documento-cliente">Vence 24 Ago 2026</p>
+            </div>
+            <span class="dias-restantes">4 días</span>
+          </li>
+          <li>
+            <span class="avatar avatar-azul">VO</span>
+            <div class="info-alerta">
+              <p class="nombre-cliente">Valentina Ortiz</p>
+              <p class="documento-cliente">Vence 26 Ago 2026</p>
+            </div>
+            <span class="dias-restantes">6 días</span>
+          </li>
+          <li>
+            <span class="avatar avatar-morado">LG</span>
+            <div class="info-alerta">
+              <p class="nombre-cliente">Laura Gómez</p>
+              <p class="documento-cliente">Vence 28 Ago 2026</p>
+            </div>
+            <span class="dias-restantes">8 días</span>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+  </div>
+    </main>
+  </div>
+
+</body>
+</html>

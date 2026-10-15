@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymControl - Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="navegacion.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="menu-lateral">
+      <div class="menu-logo">🏋️ GYMCONTROL</div>
+      <ul class="menu-lista">
+        <li><a href="dashboard.html" class="menu-enlace activo" aria-current="page">📊 Dashboard</a></li>
+        <li><a href="clientes.html" class="menu-enlace">👥 Clientes</a></li>
+        <li><a href="membresias-pagos.html" class="menu-enlace">💳 Membresías y pagos</a></li>
+        <li><a href="control-acceso.html" class="menu-enlace">🚪 Control de acceso</a></li>
+        <li><a href="reportes.html" class="menu-enlace">📈 Reportes</a></li>
+        <li><a href="gestion-usuarios.html" class="menu-enlace">🔐 Usuarios</a></li>
+        <li><a href="configuracion.html" class="menu-enlace">⚙️ Configuración</a></li>
+      </ul>
+      <div class="menu-salir">
+        <a href="login.html" class="menu-enlace">↩ Cerrar sesión</a>
+      </div>
+    </aside>
+    <main class="contenido-principal">
+      <div class="pagina">
+
+        <header class="encabezado">
+          <div>
+            <h1>Dashboard</h1>
+            <p class="subtitulo">Resumen general del gimnasio</p>
+          </div>
+          <div class="acciones-encabezado">
+            <a href="registrar-cliente.html" class="boton boton-secundario">Registrar cliente</a>
+            <a href="registrar-pago.html" class="boton boton-primario">Registrar pago</a>
+          </div>
+        </header>
+
+        <section class="resumen">
+          <div class="tarjeta tarjeta-resumen">
+            <span class="etiqueta">Clientes activos</span>
+            <span class="numero-grande">125</span>
+          </div>
+          <div class="tarjeta tarjeta-resumen">
+            <span class="etiqueta">Ingresos del mes</span>
+            <span class="numero-grande">$4.850.000</span>
+          </div>
+          <div class="tarjeta tarjeta-resumen">
+            <span class="etiqueta">Accesos de hoy</span>
+            <span class="numero-grande">87</span>
+          </div>
+          <div class="tarjeta tarjeta-resumen">
+            <span class="etiqueta">Membresías por vencer</span>
+            <span class="numero-grande">12</span>
+          </div>
+        </section>
+
+        <section class="doble-columna">
+
+          <div class="tarjeta">
+            <div class="cabecera-tarjeta">
+              <h2>Últimos pagos</h2>
+              <a href="membresias-pagos.html" class="enlace">Ver todos</a>
+            </div>
+            <table class="tabla">
+              <thead>
+                <tr>
+                  <th>Cliente</th>
+                  <th>Membresía</th>
+                  <th>Valor</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Carlos Martínez</td>
+                  <td>Mensual</td>
+                  <td>$80.000</td>
+                  <td><span class="etiqueta-estado completado">Completado</span></td>
+                </tr>
+                <tr>
+                  <td>Laura Gómez</td>
+                  <td>Trimestral</td>
+                  <td>$210.000</td>
+                  <td><span class="etiqueta-estado completado">Completado</span></td>
+                </tr>
+                <tr>
+                  <td>Mariana López</td>
+                  <td>Semestral</td>
+                  <td>$450.000</td>
+                  <td><span class="etiqueta-estado completado">Completado</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tarjeta">
+            <div class="cabecera-tarjeta">
+              <h2>Por vencer</h2>
+              <a href="control-acceso.html" class="enlace">Control de acceso</a>
+            </div>
+            <ul class="lista-alertas">
+              <li>
+                <span class="avatar avatar-naranja">MS</span>
+                <div class="info-alerta">
+                  <p class="nombre-cliente">Mateo Silva</p>
+                  <p class="documento-cliente">Vence 24 Ago 2026</p>
+                </div>
+                <span class="dias-restantes">4 días</span>
+              </li>
+              <li>
+                <span class="avatar avatar-azul">VO</span>
+                <div class="info-alerta">
+                  <p class="nombre-cliente">Valentina Ortiz</p>
+                  <p class="documento-cliente">Vence 26 Ago 2026</p>
+                </div>
+                <span class="dias-restantes">6 días</span>
+              </li>
+              <li>
+                <span class="avatar avatar-morado">LG</span>
+                <div class="info-alerta">
+                  <p class="nombre-cliente">Laura Gómez</p>
+                  <p class="documento-cliente">Vence 28 Ago 2026</p>
+                </div>
+                <span class="dias-restantes">8 días</span>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

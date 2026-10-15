@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymControl - Registrar cliente</title>
+  <link rel="stylesheet" href="registrar-cliente.css">
+  <link rel="stylesheet" href="navegacion.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="menu-lateral">
+      <div class="menu-logo">🏋️ GYMCONTROL</div>
+      <ul class="menu-lista">
+        <li><a href="dashboard.html" class="menu-enlace">📊 Dashboard</a></li>
+        <li><a href="clientes.html" class="menu-enlace activo" aria-current="page">👥 Clientes</a></li>
+        <li><a href="membresias-pagos.html" class="menu-enlace">💳 Membresías y pagos</a></li>
+        <li><a href="control-acceso.html" class="menu-enlace">🚪 Control de acceso</a></li>
+        <li><a href="reportes.html" class="menu-enlace">📈 Reportes</a></li>
+        <li><a href="gestion-usuarios.html" class="menu-enlace">🔐 Usuarios</a></li>
+        <li><a href="configuracion.html" class="menu-enlace">⚙️ Configuración</a></li>
+      </ul>
+      <div class="menu-salir">
+        <a href="login.html" class="menu-enlace">↩ Cerrar sesión</a>
+      </div>
+    </aside>
+    <main class="contenido-principal">
+  <div class="contenedor-formulario">
+    <form class="tarjeta-formulario" action="clientes.html" method="get" novalidate>
+
+      <h1>Registrar nuevo cliente</h1>
+      <p class="subtitulo">Completa los datos para registrar un nuevo cliente del gimnasio</p>
+
+      <div class="fila">
+        <div class="campo campo-ancho">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo">
+          <label for="tipoDocumento">Tipo de documento</label>
+          <select id="tipoDocumento" name="tipoDocumento" required>
+            <option value="">Seleccione...</option>
+            <option value="CC">Cédula de ciudadanía</option>
+            <option value="TI">Tarjeta de identidad</option>
+            <option value="CE">Cédula de extranjería</option>
+            <option value="PA">Pasaporte</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="numeroDocumento">Número de documento</label>
+          <input type="text" id="numeroDocumento" name="numeroDocumento" placeholder="Ej. 1023456789" required>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo">
+          <label for="fechaNacimiento">Fecha de nacimiento</label>
+          <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej. 301-234-5678" required>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo campo-ancho">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="Ej. juan.perez@email.com">
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo campo-ancho">
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" name="direccion" placeholder="Ej. Calle 100 #15-30">
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo">
+          <label for="tipoMembresia">Tipo de membresía</label>
+          <select id="tipoMembresia" name="tipoMembresia" required>
+            <option value="">Seleccione...</option>
+            <option value="basica">Básica</option>
+            <option value="estandar">Estándar</option>
+            <option value="premium">Premium</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado">
+            <option value="activo" selected>Activo</option>
+            <option value="inactivo">Inactivo</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo">
+          <label for="fechaInicio">Fecha de inicio</label>
+          <input type="date" id="fechaInicio" name="fechaInicio">
+        </div>
+
+        <div class="campo">
+          <label for="fechaVencimiento">Fecha de vencimiento</label>
+          <input type="date" id="fechaVencimiento" name="fechaVencimiento">
+        </div>
+      </div>
+
+      <div class="acciones">
+        <a href="clientes.html" class="boton boton-secundario">Cancelar</a>
+        <button type="submit" class="boton boton-primario">Guardar cliente</button>
+      </div>
+
+    </form>
+  </div>
+    </main>
+  </div>
+
+</body>
+</html>

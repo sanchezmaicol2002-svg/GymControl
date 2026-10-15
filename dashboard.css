@@ -1,0 +1,260 @@
+:root {
+  --azul-principal: #2563eb;
+  --azul-oscuro: #1d4ed8;
+  --verde: #16a34a;
+  --verde-claro: #f0fdf4;
+  --naranja: #ea580c;
+  --gris-texto: #374151;
+  --gris-claro: #6b7280;
+  --gris-borde: #e5e7eb;
+  --fondo-pagina: #f3f4f6;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--fondo-pagina);
+  color: var(--gris-texto);
+}
+
+.pagina {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.encabezado {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.encabezado h1 {
+  margin: 0 0 4px 0;
+  font-size: 22px;
+}
+
+.subtitulo {
+  margin: 0;
+  color: var(--gris-claro);
+  font-size: 14px;
+}
+
+.acciones-encabezado {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.boton {
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.boton-primario {
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+}
+
+.boton-primario:hover {
+  background-color: var(--azul-oscuro);
+}
+
+.boton-secundario {
+  background-color: var(--blanco);
+  color: var(--gris-texto);
+  border-color: var(--gris-borde);
+}
+
+.boton-secundario:hover {
+  background-color: var(--fondo-pagina);
+}
+
+.tarjeta {
+  background-color: var(--blanco);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.tarjeta h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cabecera-tarjeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.enlace {
+  font-size: 13px;
+  color: var(--azul-principal);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.enlace:hover {
+  text-decoration: underline;
+}
+
+/* Tarjetas de resumen */
+.resumen {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.tarjeta-resumen {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+.tarjeta-resumen .etiqueta {
+  font-size: 13px;
+  color: var(--gris-claro);
+}
+
+.numero-grande {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.doble-columna {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+}
+
+/* Tabla */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tabla th {
+  text-align: left;
+  color: var(--gris-claro);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+.tabla td {
+  padding: 10px 6px;
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+.etiqueta-estado {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.etiqueta-estado.completado {
+  background-color: var(--verde-claro);
+  color: var(--verde);
+}
+
+/* Lista de alertas */
+.lista-alertas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista-alertas li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+.lista-alertas li:last-child {
+  border-bottom: none;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanco);
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.avatar-naranja { background-color: var(--naranja); }
+.avatar-azul { background-color: var(--azul-principal); }
+.avatar-morado { background-color: #7c3aed; }
+
+.info-alerta {
+  flex: 1;
+}
+
+.nombre-cliente {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.documento-cliente {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: var(--gris-claro);
+}
+
+.dias-restantes {
+  background-color: #fff7ed;
+  color: var(--naranja);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .encabezado {
+    flex-direction: column;
+  }
+
+  .resumen {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doble-columna {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .resumen {
+    grid-template-columns: 1fr;
+  }
+}

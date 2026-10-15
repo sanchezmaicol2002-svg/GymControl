@@ -1,0 +1,171 @@
+:root {
+  --azul-principal: #2563eb;
+  --azul-oscuro: #1d4ed8;
+  --gris-texto: #374151;
+  --gris-claro: #6b7280;
+  --gris-borde: #d1d5db;
+  --fondo-pagina: #f3f4f6;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--fondo-pagina);
+  color: var(--gris-texto);
+}
+
+.contenedor-formulario {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.tarjeta-formulario {
+  background-color: var(--blanco);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  width: 100%;
+  max-width: 520px;
+}
+
+h1 {
+  margin: 0 0 4px 0;
+  font-size: 22px;
+}
+
+.subtitulo {
+  margin: 0 0 24px 0;
+  color: var(--gris-claro);
+  font-size: 14px;
+}
+
+.fila {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.campo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-ancho {
+  flex: 1 1 100%;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--gris-borde);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--gris-texto);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.grupo-metodo-pago {
+  display: flex;
+  gap: 10px;
+}
+
+.opcion-metodo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 8px;
+  border: 1px solid var(--gris-borde);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.opcion-metodo input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.opcion-metodo:has(input:checked) {
+  border-color: var(--azul-principal);
+  background-color: rgba(37, 99, 235, 0.08);
+  color: var(--azul-oscuro);
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.boton {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.boton-primario {
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+}
+
+.boton-primario:hover {
+  background-color: var(--azul-oscuro);
+}
+
+.boton-secundario {
+  background-color: var(--blanco);
+  color: var(--gris-texto);
+  border-color: var(--gris-borde);
+}
+
+.boton-secundario:hover {
+  background-color: var(--fondo-pagina);
+}
+
+@media (max-width: 480px) {
+  .fila,
+  .grupo-metodo-pago {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tarjeta-formulario {
+    padding: 24px;
+  }
+}

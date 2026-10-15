@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymControl - Reportes</title>
+  <link rel="stylesheet" href="reportes.css">
+  <link rel="stylesheet" href="navegacion.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="menu-lateral">
+      <div class="menu-logo">🏋️ GYMCONTROL</div>
+      <ul class="menu-lista">
+        <li><a href="dashboard.html" class="menu-enlace">📊 Dashboard</a></li>
+        <li><a href="clientes.html" class="menu-enlace">👥 Clientes</a></li>
+        <li><a href="membresias-pagos.html" class="menu-enlace">💳 Membresías y pagos</a></li>
+        <li><a href="control-acceso.html" class="menu-enlace">🚪 Control de acceso</a></li>
+        <li><a href="reportes.html" class="menu-enlace activo" aria-current="page">📈 Reportes</a></li>
+        <li><a href="gestion-usuarios.html" class="menu-enlace">🔐 Usuarios</a></li>
+        <li><a href="configuracion.html" class="menu-enlace">⚙️ Configuración</a></li>
+      </ul>
+      <div class="menu-salir">
+        <a href="login.html" class="menu-enlace">↩ Cerrar sesión</a>
+      </div>
+    </aside>
+    <main class="contenido-principal">
+  <div class="pagina">
+
+    <header class="encabezado">
+      <div>
+        <h1>Reportes</h1>
+        <p class="subtitulo">Consulta y analiza la información del gimnasio</p>
+      </div>
+      <div class="acciones-encabezado">
+        <button type="button" class="boton boton-secundario">Exportar PDF</button>
+        <button type="button" class="boton boton-primario">Exportar Excel</button>
+      </div>
+    </header>
+
+    <section class="tarjeta">
+      <form class="fila-filtros" action="#" method="get">
+        <div class="campo">
+          <label for="fechaInicial">Fecha inicial</label>
+          <input type="date" id="fechaInicial" name="fechaInicial">
+        </div>
+        <div class="campo">
+          <label for="fechaFinal">Fecha final</label>
+          <input type="date" id="fechaFinal" name="fechaFinal">
+        </div>
+        <div class="campo">
+          <label for="tipoReporte">Tipo de reporte</label>
+          <select id="tipoReporte" name="tipoReporte">
+            <option value="ingresos">Ingresos</option>
+            <option value="clientes">Clientes</option>
+            <option value="membresias">Membresías</option>
+            <option value="accesos">Accesos</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado">
+            <option value="todos">Todos</option>
+            <option value="pagado">Pagado</option>
+            <option value="pendiente">Pendiente</option>
+            <option value="vencido">Vencido</option>
+          </select>
+        </div>
+        <div class="campo campo-botones">
+          <button type="reset" class="boton boton-secundario">Limpiar</button>
+          <button type="submit" class="boton boton-primario">Aplicar filtros</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="resumen">
+      <div class="tarjeta tarjeta-resumen">
+        <span class="etiqueta">Clientes registrados</span>
+        <span class="numero-grande">156</span>
+        <span class="variacion positiva">↗ +8% este mes</span>
+      </div>
+      <div class="tarjeta tarjeta-resumen">
+        <span class="etiqueta">Membresías activas</span>
+        <span class="numero-grande">98</span>
+        <span class="variacion positiva">↗ +6% este mes</span>
+      </div>
+      <div class="tarjeta tarjeta-resumen">
+        <span class="etiqueta">Ingresos del mes</span>
+        <span class="numero-grande">$4.850.000</span>
+        <span class="variacion positiva">↗ +9% este mes</span>
+      </div>
+      <div class="tarjeta tarjeta-resumen">
+        <span class="etiqueta">Accesos registrados</span>
+        <span class="numero-grande">1.248</span>
+        <span class="variacion positiva">↗ +5% este mes</span>
+      </div>
+    </section>
+
+    <section class="doble-columna">
+
+      <div class="tarjeta">
+        <h2>Ingresos mensuales</h2>
+        <p class="texto-ayuda">Últimos 6 meses</p>
+        <div class="grafico-barras">
+          <div class="barra"><span class="valor-barra">$3.2M</span><div class="barra-relleno" style="height: 55%;"></div><span class="mes">Mar</span></div>
+          <div class="barra"><span class="valor-barra">$3.6M</span><div class="barra-relleno" style="height: 62%;"></div><span class="mes">Abr</span></div>
+          <div class="barra"><span class="valor-barra">$3.9M</span><div class="barra-relleno" style="height: 68%;"></div><span class="mes">May</span></div>
+          <div class="barra"><span class="valor-barra">$4.1M</span><div class="barra-relleno" style="height: 72%;"></div><span class="mes">Jun</span></div>
+          <div class="barra"><span class="valor-barra">$4.4M</span><div class="barra-relleno" style="height: 78%;"></div><span class="mes">Jul</span></div>
+          <div class="barra"><span class="valor-barra">$4.85M</span><div class="barra-relleno" style="height: 90%;"></div><span class="mes">Ago</span></div>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <h2>Membresías por tipo</h2>
+        <ul class="lista-membresias">
+          <li><span class="punto punto-azul"></span> Mensual <span class="porcentaje">32%</span></li>
+          <li><span class="punto punto-verde"></span> Trimestral <span class="porcentaje">20%</span></li>
+          <li><span class="punto punto-morado"></span> Semestral <span class="porcentaje">18%</span></li>
+          <li><span class="punto punto-celeste"></span> Bimestral <span class="porcentaje">13%</span></li>
+          <li><span class="punto punto-rosa"></span> Tiquetera <span class="porcentaje">9%</span></li>
+          <li><span class="punto punto-verdeclaro"></span> Día <span class="porcentaje">8%</span></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="tarjeta">
+      <div class="cabecera-tarjeta">
+        <h2>Resumen de pagos</h2>
+        <a href="membresias-pagos.html" class="enlace">Ver todos</a>
+      </div>
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Cliente</th>
+            <th>Membresía</th>
+            <th>Valor</th>
+            <th>Método de pago</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>20 Ago 2026</td>
+            <td>Carlos Martínez</td>
+            <td>Mensual</td>
+            <td>$80.000</td>
+            <td>Efectivo</td>
+            <td><span class="etiqueta-estado completado">Completado</span></td>
+          </tr>
+          <tr>
+            <td>19 Ago 2026</td>
+            <td>Laura Gómez</td>
+            <td>Trimestral</td>
+            <td>$210.000</td>
+            <td>Transferencia</td>
+            <td><span class="etiqueta-estado completado">Completado</span></td>
+          </tr>
+          <tr>
+            <td>18 Ago 2026</td>
+            <td>Mariana López</td>
+            <td>Semestral</td>
+            <td>$450.000</td>
+            <td>Tarjeta</td>
+            <td><span class="etiqueta-estado completado">Completado</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+    </main>
+  </div>
+
+</body>
+</html>

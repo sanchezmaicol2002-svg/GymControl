@@ -1,0 +1,106 @@
+/* Menú lateral compartido por todas las pantallas (menos el login) */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.menu-lateral {
+  width: 230px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 20px 12px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-logo {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2563eb;
+  padding: 4px 12px 20px 12px;
+}
+
+.menu-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.menu-enlace {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #374151;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.menu-enlace:hover {
+  background-color: #f3f4f6;
+}
+
+.menu-enlace.activo {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: #1d4ed8;
+}
+
+.menu-salir {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+.contenido-principal {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Para que un enlace <a> se vea igual que un botón */
+a.boton {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.boton {
+  font-family: inherit;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .menu-lateral {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px;
+  }
+
+  .menu-logo {
+    padding-bottom: 10px;
+  }
+
+  .menu-lista {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .menu-salir {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 8px;
+  }
+}

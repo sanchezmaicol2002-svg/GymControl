@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymControl - Membresías y pagos</title>
+  <link rel="stylesheet" href="membresias-pagos.css">
+  <link rel="stylesheet" href="navegacion.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="menu-lateral">
+      <div class="menu-logo">🏋️ GYMCONTROL</div>
+      <ul class="menu-lista">
+        <li><a href="dashboard.html" class="menu-enlace">📊 Dashboard</a></li>
+        <li><a href="clientes.html" class="menu-enlace">👥 Clientes</a></li>
+        <li><a href="membresias-pagos.html" class="menu-enlace activo" aria-current="page">💳 Membresías y pagos</a></li>
+        <li><a href="control-acceso.html" class="menu-enlace">🚪 Control de acceso</a></li>
+        <li><a href="reportes.html" class="menu-enlace">📈 Reportes</a></li>
+        <li><a href="gestion-usuarios.html" class="menu-enlace">🔐 Usuarios</a></li>
+        <li><a href="configuracion.html" class="menu-enlace">⚙️ Configuración</a></li>
+      </ul>
+      <div class="menu-salir">
+        <a href="login.html" class="menu-enlace">↩ Cerrar sesión</a>
+      </div>
+    </aside>
+    <main class="contenido-principal">
+      <div class="pagina">
+
+        <header class="encabezado">
+          <div>
+            <h1>Membresías y pagos</h1>
+            <p class="subtitulo">Consulta el historial de pagos y el estado de las membresías</p>
+          </div>
+          <div class="acciones-encabezado">
+            <a href="registrar-pago.html" class="boton boton-primario">+ Registrar pago</a>
+          </div>
+        </header>
+
+        <section class="resumen">
+          <div class="tarjeta tarjeta-resumen">
+            <span class="etiqueta">Membresías activas</span>
+            <span class="numero-grande">98</span>
+          </div>
+          <div class="tarjeta tarjeta-resumen">
+            <span class="etiqueta">Ingresos del mes</span>
+            <span class="numero-grande">$4.850.000</span>
+          </div>
+          <div class="tarjeta tarjeta-resumen">
+            <span class="etiqueta">Pagos pendientes</span>
+            <span class="numero-grande">5</span>
+          </div>
+        </section>
+
+        <section class="tarjeta">
+          <form class="fila-filtros" action="#" method="get">
+            <div class="campo campo-buscador">
+              <label for="busqueda">Buscar</label>
+              <input type="text" id="busqueda" name="busqueda" placeholder="Nombre del cliente...">
+            </div>
+            <div class="campo">
+              <label for="tipoMembresia">Membresía</label>
+              <select id="tipoMembresia" name="tipoMembresia">
+                <option value="todas">Todas</option>
+                <option value="mensual">Mensual</option>
+                <option value="trimestral">Trimestral</option>
+                <option value="semestral">Semestral</option>
+                <option value="anual">Anual</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="estado">Estado</label>
+              <select id="estado" name="estado">
+                <option value="todos">Todos</option>
+                <option value="completado">Completado</option>
+                <option value="pendiente">Pendiente</option>
+              </select>
+            </div>
+            <div class="campo campo-boton">
+              <button type="submit" class="boton boton-primario">Filtrar</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="tarjeta">
+          <h2>Historial de pagos</h2>
+          <div class="tabla-contenedor">
+            <table class="tabla">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Cliente</th>
+                  <th>Membresía</th>
+                  <th>Vencimiento</th>
+                  <th>Valor</th>
+                  <th>Método de pago</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20 Ago 2026</td>
+                  <td>Carlos Martínez</td>
+                  <td>Mensual</td>
+                  <td>20 Sep 2026</td>
+                  <td>$80.000</td>
+                  <td>Efectivo</td>
+                  <td><span class="etiqueta-estado completado">Completado</span></td>
+                </tr>
+                <tr>
+                  <td>19 Ago 2026</td>
+                  <td>Laura Gómez</td>
+                  <td>Trimestral</td>
+                  <td>19 Nov 2026</td>
+                  <td>$210.000</td>
+                  <td>Transferencia</td>
+                  <td><span class="etiqueta-estado completado">Completado</span></td>
+                </tr>
+                <tr>
+                  <td>18 Ago 2026</td>
+                  <td>Mariana López</td>
+                  <td>Semestral</td>
+                  <td>18 Feb 2027</td>
+                  <td>$450.000</td>
+                  <td>Tarjeta</td>
+                  <td><span class="etiqueta-estado completado">Completado</span></td>
+                </tr>
+                <tr>
+                  <td>17 Ago 2026</td>
+                  <td>Daniel Torres</td>
+                  <td>Mensual</td>
+                  <td>17 Sep 2026</td>
+                  <td>$80.000</td>
+                  <td>Efectivo</td>
+                  <td><span class="etiqueta-estado pendiente">Pendiente</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

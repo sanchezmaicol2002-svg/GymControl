@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymControl - Configuración y perfil</title>
+  <link rel="stylesheet" href="configuracion.css">
+  <link rel="stylesheet" href="navegacion.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="menu-lateral">
+      <div class="menu-logo">🏋️ GYMCONTROL</div>
+      <ul class="menu-lista">
+        <li><a href="dashboard.html" class="menu-enlace">📊 Dashboard</a></li>
+        <li><a href="clientes.html" class="menu-enlace">👥 Clientes</a></li>
+        <li><a href="membresias-pagos.html" class="menu-enlace">💳 Membresías y pagos</a></li>
+        <li><a href="control-acceso.html" class="menu-enlace">🚪 Control de acceso</a></li>
+        <li><a href="reportes.html" class="menu-enlace">📈 Reportes</a></li>
+        <li><a href="gestion-usuarios.html" class="menu-enlace">🔐 Usuarios</a></li>
+        <li><a href="configuracion.html" class="menu-enlace activo" aria-current="page">⚙️ Configuración</a></li>
+      </ul>
+      <div class="menu-salir">
+        <a href="login.html" class="menu-enlace">↩ Cerrar sesión</a>
+      </div>
+    </aside>
+    <main class="contenido-principal">
+      <div class="pagina">
+
+        <header class="encabezado">
+          <h1>Configuración y perfil</h1>
+          <p class="subtitulo">Actualiza tus datos personales y la información del gimnasio</p>
+        </header>
+
+        <section class="tarjeta">
+          <h2>Mi perfil</h2>
+          <form action="#" method="get">
+            <div class="fila">
+              <div class="campo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" value="Sofía Ramírez">
+              </div>
+              <div class="campo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" value="admin@gymcontrol.com">
+              </div>
+            </div>
+            <div class="fila">
+              <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" value="300 123 4567">
+              </div>
+              <div class="campo">
+                <label for="rol">Rol</label>
+                <input type="text" id="rol" name="rol" value="Administrador" disabled>
+              </div>
+            </div>
+            <div class="acciones">
+              <button type="submit" class="boton boton-primario">Guardar perfil</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="tarjeta">
+          <h2>Datos del gimnasio</h2>
+          <form action="#" method="get">
+            <div class="fila">
+              <div class="campo">
+                <label for="nombreGimnasio">Nombre del gimnasio</label>
+                <input type="text" id="nombreGimnasio" name="nombreGimnasio" placeholder="Ej. Gimnasio Fitness">
+              </div>
+              <div class="campo">
+                <label for="telefonoGimnasio">Teléfono</label>
+                <input type="tel" id="telefonoGimnasio" name="telefonoGimnasio" placeholder="Ej. 604 123 4567">
+              </div>
+            </div>
+            <div class="fila">
+              <div class="campo">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Ej. Calle 100 #15-30">
+              </div>
+            </div>
+            <div class="fila">
+              <div class="campo">
+                <label for="horaApertura">Hora de apertura</label>
+                <input type="time" id="horaApertura" name="horaApertura" value="05:00">
+              </div>
+              <div class="campo">
+                <label for="horaCierre">Hora de cierre</label>
+                <input type="time" id="horaCierre" name="horaCierre" value="21:00">
+              </div>
+            </div>
+            <div class="acciones">
+              <button type="submit" class="boton boton-primario">Guardar datos</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="tarjeta">
+          <h2>Cambiar contraseña</h2>
+          <form action="#" method="get">
+            <div class="fila">
+              <div class="campo">
+                <label for="contrasenaActual">Contraseña actual</label>
+                <input type="password" id="contrasenaActual" name="contrasenaActual" placeholder="••••••••">
+              </div>
+            </div>
+            <div class="fila">
+              <div class="campo">
+                <label for="contrasenaNueva">Nueva contraseña</label>
+                <input type="password" id="contrasenaNueva" name="contrasenaNueva" placeholder="••••••••">
+              </div>
+              <div class="campo">
+                <label for="contrasenaConfirmar">Confirmar contraseña</label>
+                <input type="password" id="contrasenaConfirmar" name="contrasenaConfirmar" placeholder="••••••••">
+              </div>
+            </div>
+            <div class="acciones">
+              <button type="submit" class="boton boton-primario">Actualizar contraseña</button>
+            </div>
+          </form>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymControl - Registrar pago</title>
+  <link rel="stylesheet" href="registrar-pago.css">
+  <link rel="stylesheet" href="navegacion.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="menu-lateral">
+      <div class="menu-logo">🏋️ GYMCONTROL</div>
+      <ul class="menu-lista">
+        <li><a href="dashboard.html" class="menu-enlace">📊 Dashboard</a></li>
+        <li><a href="clientes.html" class="menu-enlace">👥 Clientes</a></li>
+        <li><a href="membresias-pagos.html" class="menu-enlace activo" aria-current="page">💳 Membresías y pagos</a></li>
+        <li><a href="control-acceso.html" class="menu-enlace">🚪 Control de acceso</a></li>
+        <li><a href="reportes.html" class="menu-enlace">📈 Reportes</a></li>
+        <li><a href="gestion-usuarios.html" class="menu-enlace">🔐 Usuarios</a></li>
+        <li><a href="configuracion.html" class="menu-enlace">⚙️ Configuración</a></li>
+      </ul>
+      <div class="menu-salir">
+        <a href="login.html" class="menu-enlace">↩ Cerrar sesión</a>
+      </div>
+    </aside>
+    <main class="contenido-principal">
+  <div class="contenedor-formulario">
+    <form class="tarjeta-formulario" action="membresias-pagos.html" method="get" novalidate>
+
+      <h1>Registrar pago</h1>
+      <p class="subtitulo">Completa los datos para registrar el pago de una membresía</p>
+
+      <div class="fila">
+        <div class="campo campo-ancho">
+          <label for="cliente">Cliente</label>
+          <select id="cliente" name="cliente" required>
+            <option value="">Selecciona un cliente...</option>
+            <option value="1">Carlos Martínez</option>
+            <option value="2">Laura Gómez</option>
+            <option value="3">Andrés Pérez</option>
+            <option value="4">Mariana López</option>
+            <option value="5">Daniel Torres</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo campo-ancho">
+          <label for="tipoMembresia">Tipo de membresía</label>
+          <select id="tipoMembresia" name="tipoMembresia" required>
+            <option value="">Seleccione...</option>
+            <option value="mensual">Mensual</option>
+            <option value="trimestral">Trimestral</option>
+            <option value="semestral">Semestral</option>
+            <option value="anual">Anual</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo">
+          <label for="fechaInicio">Fecha de inicio</label>
+          <input type="date" id="fechaInicio" name="fechaInicio" required>
+        </div>
+
+        <div class="campo">
+          <label for="fechaVencimiento">Fecha de vencimiento</label>
+          <input type="date" id="fechaVencimiento" name="fechaVencimiento" required>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo campo-ancho">
+          <label for="valor">Valor</label>
+          <input type="number" id="valor" name="valor" placeholder="Ej. 80000" min="0" required>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo campo-ancho">
+          <label>Método de pago</label>
+          <div class="grupo-metodo-pago">
+            <label class="opcion-metodo">
+              <input type="radio" name="metodoPago" value="efectivo" checked>
+              <span>💵 Efectivo</span>
+            </label>
+            <label class="opcion-metodo">
+              <input type="radio" name="metodoPago" value="tarjeta">
+              <span>💳 Tarjeta</span>
+            </label>
+            <label class="opcion-metodo">
+              <input type="radio" name="metodoPago" value="transferencia">
+              <span>🏦 Transferencia</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="campo campo-ancho">
+          <label for="observaciones">Observaciones</label>
+          <textarea id="observaciones" name="observaciones" rows="3" placeholder="Notas adicionales (opcional)"></textarea>
+        </div>
+      </div>
+
+      <div class="acciones">
+        <a href="membresias-pagos.html" class="boton boton-secundario">Cancelar</a>
+        <button type="submit" class="boton boton-primario">Registrar pago</button>
+      </div>
+
+    </form>
+  </div>
+    </main>
+  </div>
+
+</body>
+</html>

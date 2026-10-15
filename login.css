@@ -1,0 +1,147 @@
+:root {
+  --azul-principal: #2563eb;
+  --azul-oscuro: #1d4ed8;
+  --gris-texto: #374151;
+  --gris-claro: #6b7280;
+  --gris-borde: #d1d5db;
+  --fondo-pagina: #f3f4f6;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--gris-texto);
+}
+
+.contenedor-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fondo-pagina);
+  padding: 16px;
+}
+
+.tarjeta-login {
+  background-color: var(--blanco);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 36px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--azul-principal);
+}
+
+.logo-icono {
+  font-size: 24px;
+}
+
+.subtitulo {
+  margin: 4px 0 24px 0;
+  color: var(--gris-claro);
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.campo {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px 12px;
+  border: 1px solid var(--gris-borde);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--gris-texto);
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.fila-opciones {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.recordarme {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gris-claro);
+}
+
+.enlace-olvide {
+  color: var(--azul-principal);
+  text-decoration: none;
+}
+
+.enlace-olvide:hover {
+  text-decoration: underline;
+}
+
+.boton-primario {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton-primario:hover {
+  background-color: var(--azul-oscuro);
+}
+
+@media (max-width: 420px) {
+  .tarjeta-login {
+    padding: 24px;
+  }
+}
+
+/* El botón es un enlace que lleva al dashboard */
+a.boton-primario {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
