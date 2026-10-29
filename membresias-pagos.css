@@ -67,7 +67,7 @@ body {
   font-size: 16px;
 }
 
-/* Tarjetas de resumen */
+
 .resumen {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -92,7 +92,7 @@ body {
   font-weight: 700;
 }
 
-/* Filtros */
+
 .fila-filtros {
   display: flex;
   gap: 14px;
@@ -157,7 +157,7 @@ body {
   background-color: var(--azul-oscuro);
 }
 
-/* Tabla */
+
 .tabla-contenedor {
   overflow-x: auto;
 }

@@ -139,7 +139,7 @@ input[type="password"]:focus {
   }
 }
 
-/* El botón es un enlace que lleva al dashboard */
+
 a.boton-primario {
   display: block;
   text-decoration: none;

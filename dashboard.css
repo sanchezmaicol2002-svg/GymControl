@@ -113,7 +113,7 @@ body {
   text-decoration: underline;
 }
 
-/* Tarjetas de resumen */
+
 .resumen {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -144,7 +144,7 @@ body {
   gap: 20px;
 }
 
-/* Tabla */
+
 .tabla {
   width: 100%;
   border-collapse: collapse;
@@ -177,7 +177,7 @@ body {
   color: var(--verde);
 }
 
-/* Lista de alertas */
+
 .lista-alertas {
   list-style: none;
   margin: 0;

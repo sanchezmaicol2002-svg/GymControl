@@ -65,7 +65,7 @@
   min-width: 0;
 }
 
-/* Para que un enlace <a> se vea igual que un botón */
+
 a.boton {
   display: inline-block;
   text-decoration: none;
